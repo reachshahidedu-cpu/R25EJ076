@@ -83,7 +83,8 @@ int main()
         printf("\n4. Draw Circle");
         printf("\n5. Display Canvas");
         printf("\n6. Clear Canvas");
-        printf("\n7. Exit");
+        printf("\n7. Modify Rectangle");
+        printf("\n8. Exit");
         printf("\nEnter choice: ");
 
         scanf("%d",&choice);
@@ -113,9 +114,14 @@ int main()
                 clearCanvas();
                 printf("Canvas cleared");
                 break;
+            case 7:
+                clearCanvas();
+                drawRectangle(5,15,15,5);
+                printf("Rectangle modified");
+                break;
         }
 
-    }while(choice!=7);
+    }while(choice!=8);
 
     return 0;
 }
