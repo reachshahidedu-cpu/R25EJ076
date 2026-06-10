@@ -31,6 +31,17 @@ void displayCanvas()
 int main()
 {
     clearCanvas();
+    drawRectangle(2,5,10,4)
     displayCanvas();
     return 0;
+}
+void drawRectangle(int x,int y,int width,int height)
+{
+    for(int i=x;i<x+height;i++)
+    {
+        for(int j=y;j<y+width;j++)
+        {
+            canvas[i][j]='*';
+        }
+    }
 }
