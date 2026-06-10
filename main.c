@@ -69,15 +69,48 @@ void drawCircle(int cx,int cy,int r)
         }
     }
 }
-
 int main()
 {
+    int choice;
+
     clearCanvas();
-    drawRectangle(2,5,10,4);
-    drawLine(10,5,25);
-    drawTriangle(12,5,5);
-    drawCircle(10,30,4);
-    
-    displayCanvas();
+
+    do
+    {
+        printf("\n1. Draw Rectangle");
+        printf("\n2. Draw Line");
+        printf("\n3. Draw Triangle");
+        printf("\n4. Draw Circle");
+        printf("\n5. Display Canvas");
+        printf("\n6. Exit");
+        printf("\nEnter choice: ");
+
+        scanf("%d",&choice);
+
+        switch(choice)
+        {
+            case 1:
+                drawRectangle(2,5,10,4);
+                break;
+
+            case 2:
+                drawLine(10,5,25);
+                break;
+
+            case 3:
+                drawTriangle(12,5,5);
+                break;
+
+            case 4:
+                drawCircle(10,30,4);
+                break;
+
+            case 5:
+                displayCanvas();
+                break;
+        }
+
+    }while(choice!=6);
+
     return 0;
 }
