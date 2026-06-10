@@ -27,14 +27,6 @@ void displayCanvas()
         printf("\n");
     }
 }
-
-int main()
-{
-    clearCanvas();
-    drawRectangle(2,5,10,4)
-    displayCanvas();
-    return 0;
-}
 void drawRectangle(int x,int y,int width,int height)
 {
     for(int i=x;i<x+height;i++)
@@ -44,4 +36,21 @@ void drawRectangle(int x,int y,int width,int height)
             canvas[i][j]='*';
         }
     }
+}
+void drawLine(int row,int startCol,int endCol)
+{
+    for(int i=startCol;i<=endCol;i++)
+    {
+        canvas[row][i]='*';
+    }
+}
+
+int main()
+{
+    clearCanvas();
+    drawRectangle(2,5,10,4);
+    drawLine(10,5,25);
+    
+    displayCanvas();
+    return 0;
 }
